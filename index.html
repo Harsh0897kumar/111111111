@@ -5,8 +5,8 @@
 <title>Student Portfolio Website Template</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="1style.css">
 <style>
   /*****COMMON CSS SECTION*****/
   * {
@@ -195,8 +195,7 @@ div[role="progressbar"] {
 }
 /*****EXPERIENCE SECTION*****/
 .bg-lightgrey {
-  background-color: #ffffff;
-  color:#000;
+  background-color:  #1a1a1a;
 }
 .edu-exp {
   padding: 10px 0px;
@@ -211,7 +210,6 @@ div[role="progressbar"] {
   padding: 30px 10px;
   background: #262626;
   margin-bottom: 20px;
-  color: #fff;
 }
 .experience-content {
   width: 100%;
@@ -397,7 +395,12 @@ textarea {
   font-size: 20px;
   border-radius: 50%;
 }
-
+@media screen and (max-width: 600px)
+{
+  .container{
+    width: 100%;
+  }
+}
 </style>
 <!-----MENU SECTION------>
 <div class="main-panel">
@@ -412,6 +415,8 @@ textarea {
         <a href="#about-us1">About me</a>
         <a href="#Education1">Education</a>
         <a href="#myservice1">My Services</a>
+        <a href="#port1">Portfolio</a>
+        <a href="#testimonial1">Testimonial</a>
         <a href="#GetInTouch">Get in Touch</a>
         
       </nav>
@@ -655,6 +660,3 @@ textarea {
 </div>
 </head>
 <body>
-</body>
-</html>
-
