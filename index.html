@@ -2,11 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Harsh Kumar Portfolio</title>
+<title>Student Portfolio Website Template</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <style>
   /*****COMMON CSS SECTION*****/
   * {
@@ -15,6 +16,12 @@
   padding: 0;
   -outline: 0;
   font-family Roboto, sans-serif, arial;
+}
+@media (max-width: 1100px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
 }
 html, body 
   {
@@ -37,33 +44,91 @@ html, body
   float: left;
 }
 /*****MENU SECTION*****/
-.main-panel {
-  width: 100%;
-  float: left;
-  padding-top: 20px;
-  padding-bottom: 50px;
-  height: 100vh;
-}
 
-.logo {
-  font-size: 40px;
-  font-weight: 600;
+label.logo {
+  font-size: 35px;
+  font-weight: Bold;
+  padding: 0 100px;
+  line-height: 80px;
 }
 
 .span-col {
   color: #ffbf35;
 }
 
-nav {
+nav ul {
+  margin-right: 20px;
   float: right;
 }
-
-nav a {
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  margin-left: 20px;
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
   color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: #1b9bff;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+}
+nav ul li a{
+  font-size: 16px;
+}
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+section{
+  background: url;
 }
 /*****Main BANNER*****/
 .width-50 {
@@ -195,7 +260,7 @@ div[role="progressbar"] {
 }
 /*****EXPERIENCE SECTION*****/
 .bg-lightgrey {
-  background-color:  #1a1a1a;
+  background-color:  #000000;
 }
 .edu-exp {
   padding: 10px 0px;
@@ -401,25 +466,41 @@ textarea {
     width: 100%;
   }
 }
+@media (max-width: 600px) {
+  .banner-section {
+    margin-top: 10vh;
+  }
+  .about-img {
+    padding: 0px;
+  }
+  .footer {
+    padding: 20px 0;
+  }
+}
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
 </style>
 <!-----MENU SECTION------>
-<div class="main-panel">
-  <div class="container">
-    <div class="width-33 logo">Port <span class="span-col">folio</span>
-    </div>
-    <div class="width-66">
       <nav>
-        <a href="#">
-          <span class="span-col">Home</span>
-        </a>
-        <a href="#about-us1">About me</a>
-        <a href="#Education1">Education</a>
-        <a href="#myservice1">My Services</a>
-        <a href="#port1">Portfolio</a>
-        <a href="#testimonial1">Testimonial</a>
-        <a href="#GetInTouch">Get in Touch</a>
-        
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Port <span class="span-col">folio</span>
+        </label>
+        <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#about-us1">About me</a></li>
+          <li><a href="#Education1">Education</a></li>
+          <li><a href="#myservice1">My Services</a></li>
+          <li><a href="#port1">Portfolio</a></li>
+          <li><a href="#testimonial1">Testimonial</a></li>
+          <li><a href="#GetInTouch">Get in Touch</a></li>
+        </ul>
       </nav>
+      <section></section>
     </div>
   </div>
   <!------MAIN BANNERR------>
@@ -442,7 +523,7 @@ textarea {
     </div>
   </div>
   <div class="width-50">
-    <img src="1111.png">
+    <img src="1111.png" alt="Nature" class="responsive">
   </div>
 </div>
 </div>
@@ -474,11 +555,11 @@ textarea {
             </tr>
           </table>
         </div>
-        <div class="width-50 mt-20">
+        <div class="width-55 mt-20">
           <table cellspacing="8" cellpadding="8">
             <tr>
               <th>Phone:</th>
-              <td> +9189873 09281</td>
+              <td>+9189873 09281</td>
             </tr>
             <tr>
               <th>City:</th>
@@ -486,7 +567,7 @@ textarea {
             </tr>
             <tr>
               <th>Freelancer:</th>
-              <td> Available</td>
+              <td>Available</td>
             </tr>
           </table>
         </div>
